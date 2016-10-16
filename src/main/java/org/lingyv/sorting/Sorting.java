@@ -64,7 +64,8 @@ public class Sorting {
         //Selection.sort(a);
         //Insertin.sort(a);
         //Shell.sort(a);
-        Merge.sort(a);
+        //Merge.sort(a);
+        MergeBU.sort(a);
         System.out.println(isSorted(a));
     }
 }

@@ -56,14 +56,15 @@ public class Merge {
      * @param mid
      * @param hi
      */
-    protected static void merge(Comparable[] a, int lo, int mid, int hi) {
+    private static void merge(Comparable[] a, int lo, int mid, int hi) {
         // Merge a[lo..mid] with a[mid+1..hi].
         int i = lo, j = mid + 1;
         // Copy a[lo..hi] to aux[lo..hi].
-        for (int k = lo; k <= hi; k++)
+        for (int k = lo; k <= hi; k++) {
             aux[k] = a[k];
+        }
         // Merge back to a[lo..hi].
-        for (int k = lo; k <= hi; k++)
+        for (int k = lo; k <= hi; k++) {
             if (i > mid) {
                 //left half exhausted (take from the right)
                 //左半边元素用尽,取右半边元素,取值后,索引加1
@@ -81,6 +82,6 @@ public class Merge {
                 //右半边的当前元素大于左半边的当前元素,取左半边的当前元素,取值后,索引加1
                 a[k] = aux[i++];
             }
+        }
     }
-
 }
