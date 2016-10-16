@@ -61,7 +61,10 @@ public class Sorting {
 
     public static void main(String[] args) {
         Integer[] a = {8,2,5,3,6,9,1,7};
-        Selection.sort(a);
+        //Selection.sort(a);
+        //Insertin.sort(a);
+        //Shell.sort(a);
+        Merge.sort(a);
         System.out.println(isSorted(a));
     }
 }
